@@ -13,14 +13,14 @@ $(document).ready(function () {
         event.preventDefault();
 
         // Capture nputs and store them into variables
-        var trainName = $("#name-input").val().trim();
+        var name = $("#name-input").val().trim();
         var destination = $("#destination-input").val().trim();
         var trainTime = $("#time-input").val();
         var freq = $("#frequency-input").val();
 
 
         var data = {
-            trainName: trainName,
+            name: name,
             trainTime: trainTime,
             destination: destination,
             freq: freq,
@@ -32,10 +32,10 @@ $(document).ready(function () {
 
     database.ref().orderByChild("dateAdded").on("child_added", function (snapshot) {
 
-        $("#name-display").text(trainName);
-        $("#destination-display").text(destination);
-        $("#time-display").text(trainTime);
-        $("#frequency-display").text(freq);
+        // $("#name-display").text(trainName);
+        // $("#destination-display").text(destination);
+        // $("#time-display").text(trainTime);
+        // $("#frequency-display").text(freq);
 
         // First Time (pushed back 1 year to make sure it comes before current time)
         var firstTimeConverted = moment(parseInt(snapshot.val().trainTime), "HH:mm").subtract(1, "years");
@@ -64,7 +64,7 @@ $(document).ready(function () {
 
         var row = $('<tr>' +
             '<td scope="col-lg">' + snapshot.val().name + '</td>' +
-            '<td scope="col-lg">' + snapshot.val().dest + '</td>' +
+            '<td scope="col-lg">' + snapshot.val().destination + '</td>' +
             '<td scope="col-lg">' + snapshot.val().freq + '</td>' +
             '<td scope="col-lg">' + arrival + '</td>' +
             '<td scope="col-lg">' + tMinutesTillTrain + '</td>' +
