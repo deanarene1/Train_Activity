@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Activity</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBmMK-13rDA2BB6Yy8KdnjbFQ_dDFzzmE4",
+            authDomain: "train-activity-36b2a.firebaseapp.com",
+            databaseURL: "https://train-activity-36b2a.firebaseio.com",
+            projectId: "train-activity-36b2a",
+            storageBucket: "train-activity-36b2a.appspot.com",
+            messagingSenderId: "135285731115"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/train.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <h1 class="text-center">Polar Express</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                Train Name:
+                <div id="name-display"></div>
+                Destination:
+                <div id="destination-display"></div>
+                Time:
+                <div id="time-display"></div>
+                Frequency:
+                <div id="frequency-display"></div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <form role="form">
+                <div class="form-group row">
+                    <label for="name-input">Train Name:</label>
+                    <input class="form-control" id="name-input" type="text">
+                </div>
+                <div class="form-group row">
+                    <label for="destination-input">Destination:</label>
+                    <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group row">
+                    <label for="time-input">Time:</label>
+                    <input class="form-control" id="time-input" type="text">
+                </div>
+                <div class="form-group row">
+                    <label for="frequency-input">Frequency:</label>
+                    <input class="form-control" id="frequency-input" type="text">
+                </div>
+            </form>
+
+            <button id="add-train" class="btn btn-primary">Submit</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+</body>
+
+</html>
