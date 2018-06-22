@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/snowflakes.jpg");
+    background-position: fixed;
+}
+
+.btn {
+    background-color: lightblue;
+    color: black;
+}
+
+.row {
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Spirax', cursive;
+}
+
+
+.jumbotron {
+    background-color: lightblue;
+}
+
+
+label {
+    font-family: 'Spirax', cursive;
+    margin: auto;
+}

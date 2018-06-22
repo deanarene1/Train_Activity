@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
 
+        <link rel="stylesheet" href="assets/css/style.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/train.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -33,6 +35,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
+    
 
 </head>
 
@@ -43,35 +47,40 @@
             <h1 class="text-center">Polar Express</h1>
         </div>
 
-        <div class="row">
-            <div class="col-md">
-                Train Name:
-                <div id="name-display"></div>
-                Destination:
-                <div id="destination-display"></div>
-                Time:
-                <div id="time-display"></div>
-                Frequency:
-                <div id="frequency-display"></div>
-            </div>
-        </div>
+        <main class="jumbotron container" style="background-color: #lightblue">
+                <h2>Train Schedule</h2>
+                <table class="table">
+                    <thead style="background-color: lightgray">
+                        <tr style="border-bottom: solid 3px black">
+                            <th scope="col-lg">Train Name</th>
+                            <th scope="col-lg">Destination</th>
+                            <th scope="col-lg">Frequency (min)</th>
+                            <th scope="col-lg">Next Arrival</th>
+                            <th scope="col-lg">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id='tbody' style="background-color: lightblue">
+        
+                    </tbody>
+                </table>
+            </main>
 
         <div class="card-body">
             <form role="form">
                 <div class="form-group row">
-                    <label for="name-input">Train Name:</label>
+                    <label for="name-input"><strong><h2>Train Name:</h2></strong></label>
                     <input class="form-control" id="name-input" type="text">
                 </div>
                 <div class="form-group row">
-                    <label for="destination-input">Destination:</label>
+                    <label for="destination-input"><strong><h2>Destination:</h2></strong></label>
                     <input class="form-control" id="destination-input" type="text">
                 </div>
                 <div class="form-group row">
-                    <label for="time-input">Time:</label>
+                    <label for="time-input"><strong><h2>Time:</h2></strong></label>
                     <input class="form-control" id="time-input" type="text">
                 </div>
                 <div class="form-group row">
-                    <label for="frequency-input">Frequency:</label>
+                    <label for="frequency-input"><strong><h2>Frequency:</h2></strong></label>
                     <input class="form-control" id="frequency-input" type="text">
                 </div>
             </form>
